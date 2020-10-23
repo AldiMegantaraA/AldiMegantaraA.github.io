@@ -1,0 +1,333 @@
+<!-- write your code here -->
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Resumeku.id</title>
+  </head>
+
+  <body>
+    <header>
+        <nav>
+            <a href="#form" onclick="form()">Create CV</a>
+            <a href="#resumeku" onclick="home()">Home</a>
+        </nav>
+    </header>
+    <div id="home" style="display: block;">
+        <h2>Resumeku.id</h2>
+        <h3>Resumeku merupakan platform untuk membantu para pencari pekerjaan dalam pembuatan Curriculum Vitae.</h3>
+        <img src="./pexels-cátia-matos-1072179.jpg" style="width:1310px; height: 400px;" alt="">
+    </div>
+    <div id="form" style="display: none;">
+        <h2>Isi data-data berikut ini untuk melengkapi CV anda!</h2>
+    <!-- <form action=""> -->
+        <label for="name">Name:</label><br/>
+        <input type="text" id="name" name="name" style="width: 500px;" /><br/><br/>
+        <label for="position">Position:</label><br/>
+        <input type="text" name="position" id="position" style="width: 500px;" /><br/><br/>
+        <label for="email">Email:</label><br/>
+        <input type="text" name="email" id="email" style="width: 500px;" /><br/><br/>
+        <label for="nomor">Telephone Number:</label><br/>
+        <input type="text" name="nomor" id="nomor" /><br/><br/>
+        <label for="summary">Summary</label><br/>
+        <textarea name="summary" rows="10" cols="100" id="summary">
+        </textarea><br/><br/>
+        <label for="skills1">Skills:</label>
+        <input type="text" name="skills1" id="skills1" /><br/>
+        <label for="detail-skills1">Detail skills:</label><br/>
+        <textarea name="detail-skills1" rows="10" cols="100" id="detail-skills1">
+        </textarea><br/><br/>
+        <label for="skills2">Skills:</label>
+        <input type="text" name="skills2" id="skills2" /><br/>
+        <label for="detail-skills2">Detail skills:</label><br/>
+        <textarea name="detail-skills2" rows="10" cols="100" id="detail-skills2">
+        </textarea><br/><br/>
+        <label for="skills3">Skills:</label>
+        <input type="text" name="skills3" id="skills3" /><br/>
+        <label for="detail-skills3">Detail skills:</label><br/>
+        <textarea name="detail-skills3" rows="10" cols="100" id="detail-skills3">
+        </textarea><br/><br/>
+        <label for="technical1">Technical Skills:</label>
+        <input type="text" name="technical1" id="technical1" />
+        <label for="technical2">Technical Skills:</label>
+        <input type="text" name="technical2" id="technical2" />
+        <label for="technical3">Technical Skills:</label>
+        <input type="text" name="technical3" id="technical3" />
+        <label for="technical4">Technical Skills:</label>
+        <input type="text" name="technical4" id="technical4" /><br/><br/>
+        <label for="technical5">Technical Skills:</label>
+        <input type="text" name="technical5" id="technical5" />
+        <label for="technical6">Technical Skills:</label>
+        <input type="text" name="technical6" id="technical6" />
+        <label for="technical7">Technical Skills:</label>
+        <input type="text" name="technical7" id="technical7" />
+        <label for="technical8">Technical Skills:</label>
+        <input type="text" name="technical8" id="technical8" /><br/><br/>
+        <label for="experience">Experience:</label><br/>
+        <label for="company1">Company:</label><br/>
+        <input type="text" name="company1" id="company1" /><br/>
+        <label for="role1">Position:</label><br/>
+        <input type="text" name="role1" id="role1" /><br/>
+        <label for="periode1">Periode:</label><br/>
+        <input type="text" name="periode1" id="periode1" /><br/>
+        <label for="detail-experience1">Detail:</label><br/>
+        <textarea name="detail-experience1" rows="10" cols="100" id="detail-experience1">
+        </textarea><br/><br/>
+        <label for="experience">Experience:</label><br/>
+        <label for="company2">Company:</label><br/>
+        <input type="text" name="company2" id="company2" /><br/>
+        <label for="role2">Position:</label><br/>
+        <input type="text" name="role2" id="role2" /><br/>
+        <label for="periode2">Periode:</label><br/>
+        <input type="text" name="periode2" id="periode2" /><br/>
+        <label for="detail-experience2">Detail:</label><br/>
+        <textarea name="detail-experience2" rows="10" cols="100" id="detail-experience2">
+        </textarea><br/><br/>
+        <label for="education">Education:</label><br/>
+        <label for="university">University:</label><br/>
+        <input type="text" name="university" id="university" /><br/>
+        <label for="major">Major:</label><br/>
+        <input type="text" name="major" id="major" /><br/>
+        <label for="gpa">GPA:</label><br/>
+        <input type="number" name="gpa" id="gpa" /><br/><br/>
+        <button name="submit" onclick="myFunction()">Creat Your CV</button>
+    <!-- </form> -->
+    </div>
+    <div id="cv" class="cv-1" style="display: none;">
+        <div id="inner">
+        
+            <div id="biodata">
+                <div class="cv-gc">
+                    <div class="cv-u first">
+                        <h1 id="namalengkap"></h1>
+                        <h2 id="posisi"></h2>
+                    </div>
+    
+                    <div class="cv-u">
+                        <div class="contact-info">
+                            <h3 id="emailku"></h3>
+                            <h3 id="nomor-cv"></h3>
+                        </div><!--// .contact-info -->
+                    </div>
+                </div><!--// .cv-gc -->
+            </div><!--// biodata -->
+    
+            <div id="bd">
+                <div id="cv-main">
+                    <div class="cv-b">
+    
+                        <div class="cv-gf">
+                            <div class="cv-u first">
+                                <h2>Profile</h2>
+                            </div>
+                            <div class="cv-u">
+                                <p class="enlarge" id="summary-cv">
+                                </p>
+                            </div>
+                        </div><!--// .cv-gf -->
+    
+                        <div class="cv-gf">
+                            <div class="cv-u first">
+                                <h2>Skills</h2>
+                            </div>
+                            <div class="cv-u">
+    
+                                    <div class="talent">
+                                        <h2 id="skills1-cv"></h2>
+                                        <p id="detail-skills1-cv"></p>
+                                    </div>
+    
+                                    <div class="talent">
+                                        <h2 id="skills2-cv"></h2>
+                                        <p id="detail-skills2-cv"></p>
+                                    </div>
+    
+                                    <div class="talent">
+                                        <h2 id="skills3-cv"></h2>
+                                        <p id="detail-skills3-cv"></p>
+                                    </div>
+                            </div>
+                        </div><!--// .cv-gf -->
+    
+                        <div class="cv-gf">
+                            <div class="cv-u first">
+                                <h2>Technical</h2>
+                            </div>
+                            <div class="cv-u">
+                                <ul class="talent">
+                                    <li id="technical1-cv"></li>
+                                    <li id="technical2-cv"></li>
+                                    <li class="last" id="technical3-cv"></li>
+                                </ul>
+    
+                                <ul class="talent">
+                                    <li id="technical4-cv"></li>
+                                    <li id="technical5-cv"></li>
+                                    <li class="last" id="technical6-cv"></li>
+                                </ul>
+    
+                                <ul class="talent">
+                                    <li id="technical7-cv"></li>
+                                    <li class="last" id="technical8-cv"></li>
+                                </ul>
+                            </div>
+                        </div><!--// .cv-gf-->
+    
+                        <div class="cv-gf">
+        
+                            <div class="cv-u first">
+                                <h2>Experience</h2>
+                            </div><!--// .cv-u -->
+    
+                            <div class="cv-u">
+    
+                                <div class="job">
+                                    <h2 id="company1-cv"></h2>
+                                    <h3 id="role1-cv"></h3>
+                                    <h4 id="periode1-cv"></h4>
+                                    <p id="detail-experience1-cv"></p>
+                                </div>
+    
+                                <div class="job">
+                                    <h2 id="company2-cv"></h2>
+                                    <h3 id="role2-cv"></h3>
+                                    <h4 id="periode2-cv"></h4></h4>
+                                    <p id="detail-experience2-cv"></p>
+                                </div>
+    
+                            </div><!--// .cv-u -->
+                        </div><!--// .cv-gf -->
+    
+    
+                        <div class="cv-gf last">
+                            <div class="cv-u first">
+                                <h2>Education</h2>
+                            </div>
+                            <div class="cv-u">
+                                <h2 id="university-cv"></h2>
+                                <h3 id="major-cv"> &mdash; </h3>
+                                <h3 id="gpa-cv">GPA</h3>
+                            </div>
+                        </div><!--// .cv-gf -->
+    
+    
+                    </div><!--// .cv-b -->
+                </div><!--// cv-main -->
+            </div><!--// bd -->
+    
+            <div id="ft">
+                <p id="nama1"> &mdash; <p id="emailku1">&mdash; <p id="nomor1-cv"></p>
+            </div><!--// footer -->
+    
+        </div><!-- // inner -->
+    
+    
+    </div><!--// doc -->
+    <script>
+        function myFunction() {
+          var a = document.getElementById("name").value;
+          document.getElementById("namalengkap").innerHTML = a;
+          document.getElementById("nama1").innerHTML = a;
+          var b = document.getElementById("position").value;
+          document.getElementById("posisi").innerHTML = b;
+          var c = document.getElementById("email").value;
+          document.getElementById("emailku").innerHTML = c;
+          document.getElementById("emailku1").innerHTML = c;
+          var d = document.getElementById("nomor").value;
+          document.getElementById("nomor-cv").innerHTML = d;
+          document.getElementById("nomor1-cv").innerHTML = d;
+          var e = document.getElementById("summary").value;
+          document.getElementById("summary-cv").innerHTML = e;
+          var f = document.getElementById("skills1").value;
+          document.getElementById("skills1-cv").innerHTML = f;
+          var g = document.getElementById("skills2").value;
+          document.getElementById("skills2-cv").innerHTML = g;
+          var h = document.getElementById("skills3").value;
+          document.getElementById("skills3-cv").innerHTML = h;
+          var j = document.getElementById("detail-skills1").value;
+          document.getElementById("detail-skills1-cv").innerHTML = j;
+          var k = document.getElementById("detail-skills2").value;
+          document.getElementById("detail-skills2-cv").innerHTML = k;
+          var l = document.getElementById("skills3").value;
+          document.getElementById("detail-skills3-cv").innerHTML = l;
+          var m = document.getElementById("technical1").value;
+          document.getElementById("technical1-cv").innerHTML = m;
+          var n = document.getElementById("technical2").value;
+          document.getElementById("technical2-cv").innerHTML = n;
+          var o = document.getElementById("technical3").value;
+          document.getElementById("technical3-cv").innerHTML = o;
+          var p = document.getElementById("technical4").value;
+          document.getElementById("technical4-cv").innerHTML = p;
+          var q = document.getElementById("technical5").value;
+          document.getElementById("technical5-cv").innerHTML = q;
+          var r = document.getElementById("technical6").value;
+          document.getElementById("technical6-cv").innerHTML = r;
+          var s = document.getElementById("technical7").value;
+          document.getElementById("technical7-cv").innerHTML = s;
+          var t = document.getElementById("technical8").value;
+          document.getElementById("technical8-cv").innerHTML = t;
+          var u = document.getElementById("company1").value;
+          document.getElementById("company1-cv").innerHTML = u;
+          var v = document.getElementById("role1").value;
+          document.getElementById("role1-cv").innerHTML = v;
+          var w = document.getElementById("periode1").value;
+          document.getElementById("periode1-cv").innerHTML = w;
+          var x = document.getElementById("detail-experience1").value;
+          document.getElementById("detail-experience1-cv").innerHTML = x;
+          var y = document.getElementById("company2").value;
+          document.getElementById("company2-cv").innerHTML = y;
+          var z = document.getElementById("role2").value;
+          document.getElementById("role2-cv").innerHTML = z;
+          var a1 = document.getElementById("periode2").value;
+          document.getElementById("periode2-cv").innerHTML = a1;
+          var b1 = document.getElementById("detail-experience2").value;
+          document.getElementById("detail-experience2-cv").innerHTML = b1;
+          var c1 = document.getElementById("university").value;
+          document.getElementById("university-cv").innerHTML = c1;
+          var d1 = document.getElementById("major").value;
+          document.getElementById("major-cv").innerHTML = d1;
+          var e1 = document.getElementById("gpa").value;
+          document.getElementById("gpa-cv").innerHTML = e1;
+          
+          var showCv = document.getElementById('cv');
+            if (showCv.style.display === 'none') {
+                showCv.style.display = 'block';
+            }
+          var create = document.getElementById('form');
+            if (create.style.display === 'block') {
+                create.style.display = 'none';
+            } 
+        }
+
+        function form() {
+            var create = document.getElementById('form');
+            if (create.style.display === 'none') {
+                create.style.display = 'block';
+            }
+            var index = document.getElementById('home');
+            if (index.style.display === 'block') {
+                index.style.display = 'none';
+            }
+            var showCv = document.getElementById('cv');
+            if (showCv.style.display === 'block') {
+                showCv.style.display = 'none';
+            }            
+        }
+
+        function home() {
+            var x = document.getElementById('form');
+            if (x.style.display === 'block') {
+                x.style.display = 'none';
+            }
+            var showIndex = document.getElementById('home');
+            if (showIndex.style.display === 'none') {
+                showIndex.style.display = 'block';
+            }
+            var showCv = document.getElementById('cv');
+            if (showCv.style.display === 'block') {
+                showCv.style.display = 'none';
+            }     
+        }
+
+    </script>
+  </body>
+</html>
